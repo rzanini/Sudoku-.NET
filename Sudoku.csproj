@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1341CA9-9B51-45E3-958B-723B605D96B7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>Sudoku</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sudoku</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>Sudoku.View.Form1</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.2.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\NUnit.3.2.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SexMachine.cs" />
+    <Compile Include="SudokuSolver\Block.cs" />
+    <Compile Include="SudokuSolver\Cell.cs" />
+    <Compile Include="SudokuSolver\Extentions.cs" />
+    <Compile Include="SudokuSolver\Orientation.cs" />
+    <Compile Include="SudokuSolver\SudokuSolver.cs" />
+    <Compile Include="SudokuSolver\SudokuSolverTests.cs" />
+    <Compile Include="View\ChartPoint.cs" />
+    <Compile Include="View\ComboBoxSource.cs" />
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneticLab\MutantAgent.cs" />
+    <Compile Include="GeneticLab\SudokuMutator.cs" />
+    <Compile Include="Model\Genome.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PopulationConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SudokuGenome.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\SudokuBoardModel.cs" />
+    <Content Include="App.ico" />
+    <Content Include="packages\NUnit.2.5.10.11092\fit-license.txt" />
+    <Content Include="packages\NUnit.2.5.10.11092\lib\nunit.framework.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\lib\nunit.framework.xml" />
+    <Content Include="packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\license.txt" />
+    <Content Include="packages\NUnit.2.5.10.11092\Logo.ico" />
+    <Content Include="packages\NUnit.2.5.10.11092\NUnitFitTests.html" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\Failure.png" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\fit.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\Ignored.png" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\Inconclusive.png" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\log4net.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\nunit-console-runner.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\nunit-gui-runner.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\nunit.core.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\nunit.core.interfaces.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\nunit.fixtures.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\nunit.uiexception.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\nunit.uikit.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\nunit.util.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\Skipped.png" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\lib\Success.png" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\nunit-agent-x86.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\nunit-agent.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\nunit-console-x86.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\nunit-console.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\nunit-x86.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\nunit.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\nunit.framework.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\NUnitTests.VisualState.xml" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\pnunit-agent.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\pnunit-launcher.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\pnunit.framework.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\pnunit.tests.dll" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\runFile.exe" />
+    <Content Include="packages\NUnit.2.5.10.11092\tools\TestResult.xml" />
+    <Content Include="SudokuSolver\SudokuSolver.csproj" />
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="packages\NUnit.2.5.10.11092\NUnit.2.5.10.11092.nupkg" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\agent.conf" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\agent.log.conf" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\launcher.log.conf" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\nunit-agent-x86.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\nunit-agent.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\nunit-console-x86.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\nunit-console.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\nunit-x86.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\nunit.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\NUnitTests.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\NUnitTests.nunit" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\pnunit-agent.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\pnunit-launcher.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\runFile.exe.config" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\runpnunit.bat" />
+    <None Include="packages\NUnit.2.5.10.11092\tools\test.conf" />
+    <None Include="packages\repositories.config" />
+    <None Include="SudokuSolver\packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SudokuSolver\Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
